@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -36,6 +37,10 @@ namespace SteveSimmsCodesBlog.Models
 
         [NotMapped]
         public IFormFile Image { get; set; }    // Represents the physical Image that the user selects 
+
+        //Navigation Property
+        public virtual IdentityUser Author { get; set; }
+        public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();//Blog is a Parent to a collection of posts
 
     }
 }
