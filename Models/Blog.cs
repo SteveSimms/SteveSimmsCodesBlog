@@ -38,9 +38,9 @@ namespace SteveSimmsCodesBlog.Models
         [NotMapped]
         public IFormFile Image { get; set; }    // Represents the physical Image that the user selects 
 
-        //Navigation Property
+        //Navigation Property- nav props deal in pairs or relationships between other props
         public virtual IdentityUser Author { get; set; }
-        public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();//Blog is a Parent to a collection of posts
+        public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();//Blog is a Parent to a collection of Post(s) Refrences Post.cs
 
     }
 }
