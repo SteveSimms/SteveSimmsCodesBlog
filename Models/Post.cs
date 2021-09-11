@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using SteveSimmsCodesBlog.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -37,7 +38,10 @@ namespace SteveSimmsCodesBlog.Models
         [Display(Name = "Updated Date")]
         public DateTime? Updated { get; set; }
 
-        public bool IsReady { get; set; } //Wether or not the particular Post is ready to be viewed by the public (blog is not still in the works )
+
+
+      
+        public ReadyStatus ReadyStatus { get; set; }
 
         public string Slug { get; set; } // not determined by user input, Derived from the title the user enters 
         public byte[] ImageData { get; set; }
