@@ -19,6 +19,6 @@ namespace SteveSimmsCodesBlog.Models
 
         public virtual Post Post { get; set; } // allows us to navigate away from the tag and to the Post record 
 
-        public virtual IdentityUser Author { get; set; }
+        public virtual BlogUser Author { get; set; }
     }
 }

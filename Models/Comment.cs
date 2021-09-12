@@ -36,8 +36,8 @@ namespace SteveSimmsCodesBlog.Models
         public virtual Post Post { get; set; } // hold the entire record of the AuthorId string 
 
 
-        public virtual IdentityUser Author { get; set; } // Represents the default id of the user in our system tied to our foreign key Author 
+        public virtual BlogUser Author { get; set; } // Represents the default id of the user in our system tied to our foreign key Author 
 
-        public virtual IdentityUser Moderator { get; set; } // purpose of this is to go from the moderator id string to the (IdentityUser)moderator record 
+        public virtual BlogUser Moderator { get; set; } // purpose of this is to go from the moderator id string to the (IdentityUser)moderator record 
     }
 }

@@ -40,7 +40,7 @@ namespace SteveSimmsCodesBlog.Models
         public IFormFile Image { get; set; }    // Represents the physical Image that the user selects 
 
         //Navigation Property- nav props deal in pairs or relationships between other props
-        public virtual IdentityUser Author { get; set; } // Refering to the Foreign key AuthorId without the foreign key we have no refrence to the parent 
+        public virtual BlogUser Author { get; set; } // Refering to the Foreign key AuthorId without the foreign key we have no refrence to the parent 
         public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();//Blog is a Parent to a collection of Post(s) Refrences Post.cs
 
     }
