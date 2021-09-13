@@ -11,7 +11,7 @@ namespace SteveSimmsCodesBlog.Models
     {
         public int Id { get; set; }
         public int PostId { get; set; }
-        public string AuthorId { get; set; }
+        public string BlogUserId { get; set; }
 
         [Required]
         [StringLength(25, ErrorMessage = "The {0} must be at least {2} and no more than {1} characters long", MinimumLength = 2)]
@@ -19,6 +19,6 @@ namespace SteveSimmsCodesBlog.Models
 
         public virtual Post Post { get; set; } // allows us to navigate away from the tag and to the Post record 
 
-        public virtual BlogUser Author { get; set; }
+        public virtual BlogUser BlogUser { get; set; }
     }
 }
