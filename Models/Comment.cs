@@ -12,7 +12,7 @@ namespace SteveSimmsCodesBlog.Models
     {
         public int Id { get; set; }
         public int PostId { get; set; }
-        public string AuthorId { get; set; }
+        public string BlogUserId { get; set; }
 
         public string ModeratorId { get; set; }
         [Required]
@@ -30,13 +30,13 @@ namespace SteveSimmsCodesBlog.Models
         [Display(Name = "Moderated Comment")]
         public string ModeratedBody { get; set; } // When the moderator changes the user comments 
 
-        public ModerationType ModerationType { get; set;}
+        public ModerationType ModerationType { get; set; }
 
         //Navigation properties levrages the foreign key to get the entire record 
         public virtual Post Post { get; set; } // hold the entire record of the AuthorId string 
 
 
-        public virtual BlogUser Author { get; set; } // Represents the default id of the user in our system tied to our foreign key Author 
+        public virtual BlogUser BlogUser { get; set; } // Represents the default id of the user in our system tied to our foreign key Author 
 
         public virtual BlogUser Moderator { get; set; } // purpose of this is to go from the moderator id string to the (IdentityUser)moderator record 
     }

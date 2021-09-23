@@ -12,7 +12,9 @@ namespace SteveSimmsCodesBlog.Models
     public class Blog
     {
         public int Id { get; set; } //Records the unique piece of Data for every Blog aka The "Primary Key" For our Model
-        public string AuthorId { get; set; } //Author Name "Foreign Key"- in the  Blog Model is the "Primary key " - in the ASP.NET user Model- The Foreign key in a class is the primary key in another class 
+        public string BlogUserId { get; set; } //Author Name "Foreign Key"- in the  Blog Model is the "Primary key " - in the ASP.NET user Model- The Foreign key in a class is the primary key in another class 
+
+        public int PostId { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at most {1} characters.", MinimumLength = 2)]
@@ -40,7 +42,7 @@ namespace SteveSimmsCodesBlog.Models
         public IFormFile Image { get; set; }    // Represents the physical Image that the user selects 
 
         //Navigation Property- nav props deal in pairs or relationships between other props
-        public virtual BlogUser Author { get; set; } // Refering to the Foreign key AuthorId without the foreign key we have no refrence to the parent 
+        public virtual BlogUser BlogUser { get; set; } // Refering to the Foreign key AuthorId without the foreign key we have no refrence to the parent 
         public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();//Blog is a Parent to a collection of Post(s) Refrences Post.cs
 
     }
