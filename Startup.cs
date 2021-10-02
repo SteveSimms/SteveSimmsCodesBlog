@@ -28,6 +28,8 @@ namespace SteveSimmsCodesBlog
         //New Config add to strawberry season 
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //Connects/Communicates with th DB
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
                     Configuration.GetConnectionString("DefaultConnection")));
