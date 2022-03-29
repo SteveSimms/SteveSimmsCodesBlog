@@ -9,10 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f738be2e-da3f-4c9b-a892-2d1a39b6a422" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SteveSimmsCodesBlog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SteveSimmsCodesBlog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Blogs/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Blogs/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Comments/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Comments/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Posts/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Posts/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648474510859</updated>
       <workItem from="1648474514178" duration="2054000" />
-      <workItem from="1648556505655" duration="1345000" />
+      <workItem from="1648556505655" duration="2600000" />
     </task>
     <servers />
   </component>
