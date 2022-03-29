@@ -29,21 +29,25 @@ namespace SteveSimmsCodesBlog.Controllers
         // GET: Posts/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            //restore commented out logic for actual dynamic posts
+            //---------------------------------------------------------------------------------------------------------------------
+            // if (id == null)
+            // {
+            //     return NotFound();
+            // }
 
-            var post = await _context.Posts
-                .Include(p => p.Blog)
-                .Include(p => p.BlogUser)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (post == null)
-            {
-                return NotFound();
-            }
+            // var post = await _context.Posts
+            //     .Include(p => p.Blog)
+            //     .Include(p => p.BlogUser)
+            //     .FirstOrDefaultAsync(m => m.Id == id);
+            // if (post == null)
+            // {
+            //     return NotFound();
+            // }
 
-            return View(post);
+            // return View(post);
+            //---------------------------------------------------------------------------------------------------------------------
+               return View();
         }
 
         // GET: Posts/Create
@@ -163,5 +167,7 @@ namespace SteveSimmsCodesBlog.Controllers
         {
             return _context.Posts.Any(e => e.Id == id);
         }
+
+  
     }
 }
