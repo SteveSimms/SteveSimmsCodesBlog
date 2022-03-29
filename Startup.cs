@@ -31,7 +31,7 @@ namespace SteveSimmsCodesBlog
 
             //Connects/Communicates with th DB
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(
+                options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
