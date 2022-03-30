@@ -3,6 +3,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using SteveSimmsCodesBlog.Data;
+using SteveSimmsCodesBlog.Models;
+
 namespace SteveSimmsCodesBlog;
 
 public class DataService 
@@ -10,11 +12,15 @@ public class DataService
     //private(property)instance of the db context so we can use it in the service can not be queried outside of the class
     private readonly ApplicationDbContext _dbContext;
     private readonly RoleManager<IdentityRole> _roleManager;
+    private readonly UserManager<BlogUser> _userManager;
     // constructor injection so the context is ready to go when the service is created concept: inversion of control/ dependency injection    
-    public DataService(ApplicationDbContext dbContext, RoleManager<IdentityRole> roleManager)
+    public DataService(ApplicationDbContext dbContext, 
+                        RoleManager<IdentityRole> roleManager,
+                        UserManager<BlogUser> userManager)
     {
         _dbContext = dbContext; 
         _roleManager = roleManager;
+        _userManager = userManager;
     }
 //wrapper method 
     public async Task ManageDataAsync()
@@ -45,7 +51,26 @@ public class DataService
 
     private async Task SeedUsersAsync()
     {
+              //if there are already users in the system do nothing
+              if(_dbContext.Users.Any())
+              {
+                  
+                  return;
+              }
 
+              //Step 1: Creates a new instance of BlogUser
+              var adminUser = new BlogUser()
+              {
+                  Email = "simmsstev@gmail.com",
+                  UserName = "simmsstev@gmail.com",
+                  FirstName = "Steve",
+                  LastName = "Simms",
+                  PhoneNumber = "555-555-5555",
+                  EmailConfirmed = true
+              };
+
+              //Step 2 Use the UserManager to create a new user that is defined by the admin user variable
+              await _userManager.CreateAsync(adminUser,"Abc&123!");
     }
 
 }
