@@ -9,6 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f738be2e-da3f-4c9b-a892-2d1a39b6a422" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SteveSimmsCodesBlog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SteveSimmsCodesBlog/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
@@ -89,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648474510859</updated>
       <workItem from="1648474514178" duration="2054000" />
-      <workItem from="1648556505655" duration="2600000" />
+      <workItem from="1648556505655" duration="3303000" />
     </task>
     <servers />
   </component>
