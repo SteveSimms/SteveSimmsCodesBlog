@@ -22,6 +22,7 @@ namespace SteveSimmsCodesBlog
                                     .CreateScope()
                                     .ServiceProvider
                                     .GetRequiredService<DataService>();
+                                    
             await  dataService.ManageDataAsync();
             host.Run();
 

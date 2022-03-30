@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using SteveSimmsCodesBlog.Data;
 using SteveSimmsCodesBlog.Models;
-
+using Microsoft.EntityFrameworkCore;
 namespace SteveSimmsCodesBlog;
 
 public class DataService 
@@ -25,6 +25,8 @@ public class DataService
 //wrapper method 
     public async Task ManageDataAsync()
     {
+        //Task: create the DB from the migrations
+      await  _dbContext.Database.MigrateAsync();
         //Task 1: Seed a few roles into the system to the system
         await SeedRolesAsync();
 
@@ -65,6 +67,7 @@ public class DataService
                   UserName = "simmsstev@gmail.com",
                   FirstName = "Steve",
                   LastName = "Simms",
+                  DisplayName = "Abu Malik",
                   PhoneNumber = "555-555-5555",
                   EmailConfirmed = true
               };
@@ -83,6 +86,7 @@ public class DataService
                   UserName = "malik@asianca.com",
                   FirstName = "Malik",
                   LastName = "Simms",
+                  DisplayName = "Ibn Asim",
                   PhoneNumber = "555-555-1234",
                   EmailConfirmed = true
               };
