@@ -9,7 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f738be2e-da3f-4c9b-a892-2d1a39b6a422" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/DataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/DataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
       <updated>1648474510859</updated>
       <workItem from="1648474514178" duration="2054000" />
       <workItem from="1648556505655" duration="3303000" />
-      <workItem from="1648662237962" duration="2656000" />
+      <workItem from="1648662237962" duration="3485000" />
     </task>
     <servers />
   </component>

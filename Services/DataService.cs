@@ -71,6 +71,26 @@ public class DataService
 
               //Step 2 Use the UserManager to create a new user that is defined by the admin user variable
               await _userManager.CreateAsync(adminUser,"Abc&123!");
+
+              //Step 3. Add this new user to the administrator role
+             await  _userManager.AddToRoleAsync(adminUser,BlogRole.Administrator.ToString());
+
+             //Step1 repeat for the other roles moderator
+            //creating a new local instance of bloguser to describe a moderator 
+            var modUser = new BlogUser()
+              {
+                  Email = "malik@asianca.com",
+                  UserName = "malik@asianca.com",
+                  FirstName = "Malik",
+                  LastName = "Simms",
+                  PhoneNumber = "555-555-1234",
+                  EmailConfirmed = true
+              };
+
+
+                await _userManager.CreateAsync(modUser,"Abc&123!");
+
+                await _userManager.AddToRoleAsync(modUser,BlogRole.Moderator.ToString());
     }
 
 }

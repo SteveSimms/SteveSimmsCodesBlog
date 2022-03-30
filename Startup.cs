@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SteveSimmsCodesBlog.Data;
+
 using SteveSimmsCodesBlog.Models;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,9 @@ namespace SteveSimmsCodesBlog
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            //Register custom DataService Class
+            services.AddScoped<DataService>();
         }
 
 
@@ -79,7 +83,8 @@ namespace SteveSimmsCodesBlog
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-                endpoints.MapControllers();
+                //may need to comment out if routes conflict
+                // endpoints.MapControllers();
 
             });
         }
