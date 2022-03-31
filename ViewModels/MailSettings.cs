@@ -9,4 +9,6 @@ public class MailSettings
     public string Password { get; set; }
     public string Host { get; set; }
     public string  Port  { get; set; }
+
+    // kvtgwplegcsrglkd
 }
