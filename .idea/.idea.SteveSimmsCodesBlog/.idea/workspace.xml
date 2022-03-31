@@ -8,7 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f738be2e-da3f-4c9b-a892-2d1a39b6a422" name="Changes" comment="" />
+    <list default="true" id="f738be2e-da3f-4c9b-a892-2d1a39b6a422" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Services/EmailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/IBlogEmailSender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SteveSimmsCodesBlog.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SteveSimmsCodesBlog.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,6 +94,7 @@
       <workItem from="1648474514178" duration="2054000" />
       <workItem from="1648556505655" duration="3303000" />
       <workItem from="1648662237962" duration="5093000" />
+      <workItem from="1648748688090" duration="335000" />
     </task>
     <servers />
   </component>
