@@ -50,6 +50,9 @@ namespace SteveSimmsCodesBlog
 
             //Register custom DataService Class
             services.AddScoped<DataService>();
+            //register a pre configured instance of the  MailSettings class
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddScoped<IBlogEmailSender, EmailService>();
         }
 
 
